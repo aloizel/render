@@ -3,24 +3,24 @@ const app = express();
 const PORT = process.env.PORT || 3000;
  
 // Change cette URL par ton vrai lien PDF
-const PDF_URL = "https://i.imgur.com/aYqhIzz.jpeg";
+const PDF_URL = "https://www.orimi.com/pdf-test.pdf"; //"https://i.imgur.com/aYqhIzz.jpeg";
  
 app.get("/pdf", (req, res) => {
   res.json({
     messages: [
       {
-        type: "GALLERY", //"ATTACHMENT",
+        type: "ATTACHMENT", // "GALLERY",
         messageNumber: 1,
-        //attachment: {
-        //  type: "file",
-        //  url: PDF_URL,
-        //},
-       elements: [
-         {
-           title: "Mon image",
-           imageUrl: PDF_URL
-         }
-       ]
+        attachment: {
+         type: "file",
+         url: PDF_URL,
+        },
+       // elements: [
+       //   {
+       //     title: "Mon image",
+       //     imageUrl: PDF_URL
+       //   }
+       // ]
       },
     ],
   });

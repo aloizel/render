@@ -9,7 +9,7 @@ app.get("/pdf", (req, res) => {
   res.json({
     messages: [
       {
-        type: "ATTACHMENT",
+        type: "GALLERY", //"ATTACHMENT",
         messageNumber: 1,
         attachment: {
           type: "file",

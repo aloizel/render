@@ -3,7 +3,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
  
 // Change cette URL par ton vrai lien PDF
-const PDF_URL = "https://upload.wikimedia.org/wikipedia/commons/a/a7/Camponotus_flavomarginatus_ant.jpg";
+const PDF_URL = "https://i.imgur.com/aYqhIzz.jpeg";
  
 app.get("/pdf", (req, res) => {
   res.json({

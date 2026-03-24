@@ -11,10 +11,16 @@ app.get("/pdf", (req, res) => {
       {
         type: "GALLERY", //"ATTACHMENT",
         messageNumber: 1,
-        attachment: {
-          type: "file",
-          url: PDF_URL,
-        },
+        //attachment: {
+        //  type: "file",
+        //  url: PDF_URL,
+        //},
+       elements: [
+         {
+           title: "Mon image",
+           imageUrl: PDF_URL
+         }
+       ]
       },
     ],
   });
